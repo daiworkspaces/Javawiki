@@ -10,7 +10,7 @@ public class TestController {
 
     /**
      * GET ,POST ,PUT,DELETE
-     * 
+     *
      */
     //@RequestMapping("/hello")   //添加一个接口路径,RequestMapping 表示任何请求方式都支持接口的访问
     //@GetMapping("/hello")  //表示get方式的接口请求。
@@ -22,4 +22,11 @@ public class TestController {
     public String hello(){
         return "hell world!!";
     }
+
+    @PostMapping("/hello/post")
+    public String helloPost(String name){
+        return "hello world post, " + name;
+    }
 }
+
+
