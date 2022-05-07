@@ -1,11 +1,15 @@
 package com.jiawa.wiki.controller;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @RestController //返回一个字符串
 //@Controller //表示返回一个页面
 public class TestController {
+
+    @Value("${test.hell:23}")
+    private String testHello;
 
 
     /**
@@ -20,7 +24,7 @@ public class TestController {
 //    @RequestMapping(value = "/hello",method = RequestMethod.GET)
     @GetMapping("/hello")
     public String hello(){
-        return "hell world!!";
+        return "hell world!!" +testHello;
     }
 
     @PostMapping("/hello/post")
