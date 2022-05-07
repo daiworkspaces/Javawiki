@@ -27,6 +27,11 @@ public class TestController {
     public String helloPost(String name){
         return "hello world post, " + name;
     }
+
+    @PostMapping("/helloPost")
+    public String hello1Post(String postName){
+        return "hello post 2:" + postName;
+    }
 }
 
 
