@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 //@Controller //表示返回一个页面
 public class TestController {
 
-    @Value("${test.hell:23}")
+    @Value("${test.hello:back}")
     private String testHello;
 
 
