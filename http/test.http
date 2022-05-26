@@ -15,3 +15,5 @@ Content-Type: application/x-www-form-urlencoded
 
 postName=hello
 ###
+GET http://localhost:8887/test/list
+#Accept: application/json

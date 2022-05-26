@@ -1,8 +1,13 @@
 package com.jiawa.wiki.controller;
 
+import com.jiawa.wiki.domain.Test;
+import com.jiawa.wiki.server.TestService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+
+import javax.annotation.Resource;
+import java.util.List;
 
 @RestController //返回一个字符串
 //@Controller //表示返回一个页面
@@ -10,6 +15,9 @@ public class TestController {
 
     @Value("${test.hello:back}")
     private String testHello;
+
+    @Resource
+    private TestService testService;
 
 
     /**
@@ -35,6 +43,11 @@ public class TestController {
     @PostMapping("/helloPost")
     public String hello1Post(String postName){
         return "hello post 2:" + postName;
+    }
+
+    @GetMapping("/test/list")
+    public List<Test> list(){
+        return testService.list();
     }
 }
 
