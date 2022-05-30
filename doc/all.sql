@@ -1,13 +1,11 @@
-use wiki;
+
 drop table if exists test;
-drop table if exists test1;
-drop table if exists test2;
-drop table if exists testwiki;
+
 create table test(
-                      id bigint not null comment 'id',
-                      name varchar(50) comment  '名称',
-                      password varchar(50) comment '密码',
-                      primary key (id)
+ id bigint not null comment 'id',
+ name varchar(50) comment  '名称',
+ password varchar(50) comment '密码',
+ primary key (id)
 )engine = innodb default charset = utf8mb4 comment ='测试';
 
 drop table if exists template_details;
@@ -24,5 +22,5 @@ create table  template_details  (
                                     PRIMARY KEY (id)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='模版详情表';
 
-use wiki;
+use wikidev;
 insert into test values (1,'wangsan','123456');
