@@ -11,7 +11,7 @@ create table `ebook`
     `view_count`   int comment '阅读数',
     `vote_count`   int comment '点赞数',
     primary key (`id`)
-)engine = innodb default charset=utf8mb4 comment '电子书'
+)engine = innodb default charset=utf8mb4 comment '电子书';
 
 insert into `ebook` (id,name,description) values (1,'SpringBoot入门教程','零基础企业应用');
 insert into `ebook`(id,name,description)values (2,'vue入门教程','企业级vue');
